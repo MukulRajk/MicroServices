@@ -1,0 +1,20 @@
+package com.mindcraft.upiservicedemo;
+
+import java.util.Map;
+
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+@RequestMapping("/api/upi")
+public class UpiController {
+
+	@AutoWired
+	RestTemplate template;
+	
+	public Map<String,String> upiCheckBalance(){
+		
+		template.getForObject("http://ACCOUNT-SERVICE/api/account/balance", Map.class);
+		//u will get jSON like {} ->map
+		map.put("",map);
+	}
+}
